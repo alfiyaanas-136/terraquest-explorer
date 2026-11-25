@@ -1,0 +1,238 @@
+.tq-hero {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    color: #ffffff;
+
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 19, 32, 0.75) 0%,
+        rgba(0, 25, 42, 0.35) 50%,
+        rgba(0, 20, 35, 0.15) 100%
+    ),
+    linear-gradient(
+        0deg,
+        #031927 0%,
+        transparent 45%
+    ),
+    url('../../assets/Hero/hero-mountains.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tq-hero-container {
+    max-width: 1500px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 65px 5% 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tq-hero-content {
+    max-width: 580px;
+}
+.tq-hero-label {
+    margin-bottom: 18px;
+    color: #39baff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.tq-hero-content h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(38px, 4.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+.tq-hero-description {
+    max-width: 380px;
+    margin-top: 22px;
+    color: #f0f4f7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.tq-hero-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 580px;
+    height: 52px;
+    margin-top: 28px;
+    background: rgba(20, 49, 68, 0.75);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+.tq-hero-search > svg {
+    margin-left: 16px;
+    flex-shrink: 0;
+    color: #ffffff;
+}
+.tq-hero-search input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 13px;
+}
+.tq-hero-search input::placeholder {
+    color: #e0e7ed;
+}
+.tq-hero-search button {
+    height: 100%;
+    padding: 0 24px;
+    background: #078cff;
+    border: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.25s ease;
+}
+.tq-hero-search button:hover {
+    background: #006fd1;
+}
+.tq-hero-categories {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    width: 100%;
+    margin-top: 55px;
+}
+.tq-hero-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+.tq-hero-category:last-child {
+    border-right: none;
+}
+.tq-hero-category:hover {
+    transform: translateY(-4px);
+}
+.tq-hero-icon {
+    flex-shrink: 0;
+    color: #43baff;
+}
+.tq-category-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+.tq-category-text strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+.tq-category-text small {
+    color: #d5e2eb;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+    .tq-hero-categories {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+
+    .tq-hero-category:nth-child(3) {
+        border-right: none;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .tq-hero,
+    .tq-hero-container {
+        min-height: 650px;
+    }
+
+    .tq-hero-container {
+        padding-top: 65px;
+    }
+
+    .tq-hero-content h1 {
+        font-size: clamp(34px, 8vw, 48px);
+    }
+
+    .tq-hero-description {
+        font-size: 14px;
+    }
+
+    .tq-hero-categories {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 60px;
+        gap: 12px 0;
+    }
+
+    .tq-hero-category {
+        justify-content: flex-start;
+        padding: 12px 8px;
+    }
+
+    .tq-hero-category:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .tq-hero-category:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .tq-hero-container {
+        padding: 50px 5% 30px;
+    }
+
+    .tq-hero-search {
+        height: 48px;
+    }
+
+    .tq-hero-search button {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .tq-hero-search input {
+        font-size: 12px;
+    }
+
+    .tq-hero-category {
+        gap: 8px;
+    }
+
+    .tq-category-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .tq-category-text strong {
+        font-size: 11px;
+    }
+
+    .tq-category-text small {
+        font-size: 9px;
+    }
+}

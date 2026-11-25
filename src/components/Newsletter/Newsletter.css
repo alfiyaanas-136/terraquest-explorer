@@ -1,0 +1,258 @@
+
+/* =================================
+   NEWSLETTER SECTION
+================================= */
+
+.newsletter-section {
+  width: 100%;
+  padding: 0 0 65px;
+  background: #031923;
+}
+
+.newsletter-container {
+  position: relative;
+  width: 80%;
+  max-width: 1500px;
+  min-height: 140px;
+  margin: 0 auto;
+  padding: 25px 7.5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 37, 60, 0.82),
+      rgba(0, 48, 75, 0.65)
+    ),
+    url('../../assets/experiences/newsletter-mountains.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid rgba(44, 181, 255, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* =================================
+   NEWSLETTER CONTENT
+================================= */
+
+.newsletter-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.newsletter-content h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+
+.newsletter-content p {
+  max-width: 400px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =================================
+   NEWSLETTER FORM
+================================= */
+
+.newsletter-form-wrapper {
+  flex: 1;
+  max-width: 540px;
+}
+
+.newsletter-form {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: stretch;
+
+  background: rgba(0, 28, 45, 0.65);
+  border: 1px solid rgba(99, 190, 235, 0.35);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Email Input */
+
+.newsletter-input-group {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 16px;
+}
+
+.newsletter-mail-icon {
+  width: 17px;
+  height: 17px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.newsletter-input-group input {
+  width: 100%;
+  min-width: 0;
+
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.newsletter-input-group input::placeholder {
+  color: #e1eaf0;
+  opacity: 1;
+}
+
+/* Subscribe Button */
+
+.newsletter-button {
+  min-width: 130px;
+  padding: 0 22px;
+
+  color: #ffffff;
+  background: #078bff;
+  border: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background: #006ed6;
+}
+
+.newsletter-button:active {
+  transform: scale(0.97);
+}
+
+/* Form Message */
+
+.newsletter-message {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1024px) {
+  .newsletter-container {
+    width: 88%;
+    padding: 25px 5%;
+    gap: 25px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 26px;
+  }
+
+  .newsletter-form-wrapper {
+    max-width: 450px;
+  }
+
+  .newsletter-button {
+    min-width: 110px;
+    padding: 0 15px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 650px) {
+  .newsletter-section {
+    padding-bottom: 40px;
+  }
+
+  .newsletter-container {
+    width: 90%;
+    padding: 28px 22px;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+
+    border-radius: 16px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 25px;
+  }
+
+  .newsletter-content p {
+    font-size: 14px;
+  }
+
+  .newsletter-form-wrapper {
+    width: 100%;
+    max-width: none;
+  }
+
+  .newsletter-form {
+    min-height: 50px;
+  }
+
+  .newsletter-input-group {
+    padding: 0 10px;
+    gap: 7px;
+  }
+
+  .newsletter-input-group input {
+    font-size: 12px;
+  }
+
+  .newsletter-button {
+    min-width: 100px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+  .newsletter-container {
+    padding: 24px 15px;
+  }
+
+  .newsletter-button {
+    min-width: 85px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .newsletter-input-group input {
+    font-size: 11px;
+  }
+}

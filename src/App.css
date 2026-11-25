@@ -1,0 +1,81 @@
+
+.app {
+  min-height: 100vh;
+  background-color: #080a0d;
+  color: #ffffff;
+}
+
+/* .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 5%;
+  border-bottom: 1px solid #242830;
+}
+
+.site-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-nav a {
+  color: #a6aab3;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #24c99b;
+}
+
+.page-content {
+  padding: 80px 5%;
+}
+
+.page-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.page-content p {
+  color: #a6aab3;
+  line-height: 1.7;
+}
+
+.page-content a:not(.site-logo) {
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    padding: 20px 5%;
+    gap: 20px;
+  }
+
+  .site-logo {
+    font-size: 1.4rem;
+  }
+
+  .site-nav {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-content {
+    padding: 50px 5%;
+  }
+}  */

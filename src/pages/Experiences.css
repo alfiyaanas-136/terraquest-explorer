@@ -1,0 +1,152 @@
+
+.experiences-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Experience Hero */
+
+.experiences-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 620px;
+    padding: 80px 8%;
+    overflow: hidden;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 19, 32, 0.75) 0%,
+            rgba(0, 25, 42, 0.35) 50%,
+            rgba(0, 20, 35, 0.15) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #031927 0%,
+            transparent 45%
+        ),
+        var(--experience-hero-image);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experiences-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    color: #ffffff;
+}
+
+.experiences-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 25px;
+    color: #f5b76b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.experiences-hero-content h1 {
+    margin-bottom: 22px;
+    font-size: clamp(38px, 5vw, 66px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.experiences-hero-content p {
+    max-width: 590px;
+    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Hero Button */
+
+.experiences-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 7px;
+    background: #f28a45;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.experiences-hero-btn:hover {
+    background: #df7130;
+    transform: translateY(-3px);
+}
+
+
+/* Keyboard Accessibility */
+
+.experiences-hero-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 5px;
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .experiences-hero-btn {
+        transition: none;
+    }
+
+    .experiences-hero-btn:hover {
+        transform: none;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 992px) {
+    .experiences-hero {
+        min-height: 560px;
+        padding: 70px 6%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    .experiences-hero {
+        min-height: 520px;
+        padding: 60px 5%;
+        background-position: center;
+    }
+
+    .experiences-hero-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .experiences-hero-content h1 {
+        font-size: clamp(30px, 8vw, 38px);
+    }
+
+    .experiences-hero-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .experiences-hero-btn {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+}

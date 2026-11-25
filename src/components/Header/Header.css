@@ -1,0 +1,281 @@
+.tq-header {
+    width: 100%;
+    height: 84px;
+    background: #031927;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    z-index: 1000;
+}
+.tq-header-container {
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.tq-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 35px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.tq-logo-image {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.tq-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.tq-logo-name {
+    font-family: 'inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #ffffff;
+}
+.tq-logo-subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #079cff;
+}
+.tq-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+}
+.tq-nav-link {
+    position: relative;
+    padding: 31px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e0e6ec;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+.tq-nav-link:hover,
+.tq-nav-active {
+    color: #ffffff;
+}
+.tq-nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background: #079cff;
+}
+.tq-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+.tq-explore-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 22px;
+    background: #078cff;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+.tq-explore-btn:hover {
+    background: #0073d6;
+    transform: translateY(-2px);
+}
+.tq-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+.tq-menu-btn:hover {
+    color: #079cff;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+    .tq-header-container {
+        gap: 18px;
+    }
+
+    .tq-nav {
+        gap: 24px;
+    }
+
+    .tq-logo {
+        padding-right: 20px;
+    }
+
+    .tq-logo-name {
+        font-size: 21px;
+    }
+
+    .tq-header-actions {
+        gap: 16px;
+    }
+
+    .tq-explore-btn {
+        padding: 12px 16px;
+    }
+}
+
+/* =====================================
+   MOBILE NAVIGATION
+===================================== */
+
+@media (max-width: 900px) {
+    .tq-header {
+        height: 72px;
+    }
+
+    .tq-header-container {
+        padding: 0 5%;
+    }
+
+    .tq-logo {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .tq-logo-image {
+        width: 46px;
+        height: 46px;
+    }
+
+    .tq-logo-name {
+        font-size: 20px;
+    }
+
+    .tq-logo-subtitle {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .tq-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 16px 5%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #031927;
+        border-top: 1px solid #163747;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .tq-nav-open {
+        display: flex;
+    }
+
+    .tq-nav-link {
+        padding: 15px 10px;
+    }
+
+    .tq-nav-active::after {
+        bottom: 8px;
+        left: 10px;
+        width: 35px;
+        height: 2px;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+    .tq-logo {
+        gap: 8px;
+    }
+
+    .tq-logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .tq-logo-name {
+        font-size: 18px;
+    }
+
+    .tq-logo-subtitle {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .tq-header-actions {
+        gap: 12px;
+    }
+
+    .tq-explore-btn {
+        display: none;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

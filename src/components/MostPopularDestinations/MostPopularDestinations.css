@@ -1,0 +1,175 @@
+.tq-popular-section {
+    width: 100%;
+    padding: 45px 5% 55px;
+    background: #031927;
+    color: #ffffff;
+}
+.tq-popular-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.tq-popular-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.tq-popular-heading h2{
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 700;
+}
+.tq-popular-heading p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d4e1eb;
+}
+.tq-popular-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+.tq-popular-card {
+    position: relative;
+    display: block;
+    height: 220px;
+    overflow: hidden;
+    outline: none;
+    border-radius: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    background: #06283c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tq-popular-card::before,
+.tq-popular-card::after {
+    display: none;
+    content: none;
+}
+.tq-popular-card:hover {
+    /* transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); */
+    outline: none;
+    text-decoration: none;
+}
+.tq-popular-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transition: transform 0.4s ease; */
+    border: none;
+}
+.tq-popular-card:hover img {
+    transform: scale(1.06);
+}
+.tq-popular-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 18px 10px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 15, 28, 0.85) 0%,
+        rgba(0, 15, 28, 0.1) 55%,
+        transparent 100%
+    );
+}
+.tq-popular-overlay h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+.tq-popular-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.tq-popular-indicators span {
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    background: #52768b;
+}
+
+.tq-popular-indicators span.active {
+    background: #079cff;
+} 
+
+/* STATUS */
+
+.tq-popular-status {
+    text-align: center;
+    padding: 35px 0;
+    color: #d4e1eb;
+} 
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .tq-popular-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tq-popular-card {
+        height: 240px;
+    }
+
+    .tq-popular-heading h2 {
+        font-size: 30px;
+    }
+} 
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .tq-popular-section {
+        padding: 40px 5%;
+    }
+
+    .tq-popular-heading h2 {
+        font-size: 27px;
+    }
+
+    .tq-popular-heading p {
+        font-size: 14px;
+    }
+
+    .tq-popular-grid {
+        gap: 12px;
+    }
+
+    .tq-popular-card {
+        height: 180px;
+    }
+
+    .tq-popular-overlay h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tq-popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tq-popular-card {
+        height: 220px;
+    }
+} 
+
+
+
+
+
+
+
+

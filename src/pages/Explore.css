@@ -1,0 +1,856 @@
+
+/* ========================================
+   EXPLORE PAGE
+======================================== */
+
+.explore-page {
+    min-height: 100vh;
+    color: #ffffff;
+    background: #031724;
+}
+
+/* ========================================
+   EXPLORE HERO SECTION
+======================================== */
+
+.explore-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 430px;
+    padding: 90px 6%;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(7, 140, 255, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(57, 186, 255, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #062b40, #031724 75%);
+}
+
+.explore-hero::before,
+.explore-hero::after {
+    position: absolute;
+    content: '';
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.explore-hero::before {
+    width: 400px;
+    height: 400px;
+    top: -220px;
+    right: -100px;
+}
+
+.explore-hero::after {
+    width: 300px;
+    height: 300px;
+    bottom: -200px;
+    left: -100px;
+}
+
+.explore-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.explore-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    color: #39baff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.explore-hero-content h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.explore-hero-content h1 span {
+    display: block;
+    color: #39baff;
+}
+
+.explore-hero-content > p {
+    max-width: 620px;
+    margin: 20px auto 32px;
+    color: #b3c8d5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   SEARCH FORM
+======================================== */
+
+.explore-search-form {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 8px 9px 8px 20px;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-search-form > svg {
+    flex-shrink: 0;
+    color: #078cff;
+}
+
+.explore-search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 0;
+    color: #142c3a;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.explore-search-form input::placeholder {
+    color: #8295a1;
+}
+
+.explore-search-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 13px 27px;
+    color: #ffffff;
+    background: #078cff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.explore-search-form button:hover {
+    background: #006fce;
+}
+
+.explore-search-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.explore-search-form:focus-within {
+    border-color: #39baff;
+    box-shadow: 0 0 0 3px rgba(57, 186, 255, 0.15);
+}
+
+/* Clear Search Button */
+
+.explore-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: #647987;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.explore-clear-btn:hover {
+    color: #078cff;
+    background: #eaf5ff;
+}
+
+.explore-search-error {
+    margin: 12px auto 0;
+    color: #ff8585;
+    font-size: 13px;
+    text-align: center;
+}
+
+.explore-search-form input:focus-visible {
+    outline: none;
+}
+
+.explore-search-form button:focus-visible,
+.explore-clear-btn:focus-visible {
+    outline: 2px solid #39baff;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   RESULTS SECTION
+======================================== */
+
+.explore-results-section {
+    width: 100%;
+    max-width: 1250px;
+    min-height: 450px;
+    margin: 0 auto;
+    padding: 75px 35px 100px;
+}
+
+.explore-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.explore-section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #39baff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.explore-section-heading h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 700;
+}
+
+.explore-section-heading p {
+    margin: 0;
+    color: #9bb2c0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.explore-result-count {
+    flex-shrink: 0;
+    padding: 9px 14px;
+    color: #39baff;
+    background: rgba(7, 140, 255, 0.1);
+    border: 1px solid rgba(7, 140, 255, 0.25);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ========================================
+   FILTER AND SORTING
+======================================== */
+
+.explore-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px 22px;
+    background: #092536;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+}
+
+.explore-filter-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.explore-filter-title svg {
+    color: #39baff;
+}
+
+.explore-filter-controls {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.explore-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.explore-filter-group label {
+    color: #9bb2c0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.explore-filter-group select {
+    min-width: 155px;
+    padding: 11px 34px 11px 12px;
+    color: #ffffff;
+    background-color: #10364b;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.explore-filter-group select:focus {
+    border-color: #39baff;
+}
+
+.explore-filter-group select option {
+    color: #ffffff;
+    background: #092536;
+}
+
+.explore-reset-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 14px;
+    color: #39baff;
+    background: rgba(7, 140, 255, 0.1);
+    border: 1px solid rgba(7, 140, 255, 0.3);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.explore-reset-btn:hover {
+    background: rgba(7, 140, 255, 0.2);
+    border-color: #39baff;
+}
+
+.explore-empty-reset {
+    margin-top: 20px;
+}
+
+/* ========================================
+   DESTINATION GRID
+======================================== */
+
+.explore-location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+/* ========================================
+   DESTINATION CARD
+======================================== */
+
+.explore-location-card {
+    overflow: hidden;
+    background: #092536;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.explore-location-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(7, 140, 255, 0.55);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   DESTINATION IMAGE BANNER
+======================================== */
+
+.explore-card-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(57, 186, 255, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #075078, #06283c 65%, #031724);
+}
+
+/* Decorative circles for the fallback banner */
+
+.explore-card-banner::before,
+.explore-card-banner::after {
+    position: absolute;
+    content: '';
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.explore-card-banner::before {
+    width: 230px;
+    height: 230px;
+}
+
+.explore-card-banner::after {
+    width: 170px;
+    height: 170px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Wikimedia Destination Image */
+
+.explore-card-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.explore-location-card:hover .explore-card-image {
+    transform: scale(1.06);
+}
+
+/* Image Dark Overlay */
+
+.explore-card-banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        0deg,
+        rgba(3, 23, 36, 0.78) 0%,
+        rgba(3, 23, 36, 0.2) 55%,
+        rgba(3, 23, 36, 0.15) 100%
+    );
+    pointer-events: none;
+}
+
+/* Discover Tag */
+
+.explore-card-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 11px;
+    color: #ffffff;
+    background: rgba(3, 23, 36, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    backdrop-filter: blur(8px);
+}
+
+/* Fallback Map Pin Icon */
+
+.explore-card-banner-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    color: #ffffff;
+    background: rgba(57, 186, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgba(57, 186, 255, 0.15);
+}
+
+/* Destination Name on Image */
+
+.explore-card-banner-name {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    left: 16px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ========================================
+   DESTINATION CARD CONTENT
+======================================== */
+
+.explore-card-content {
+    padding: 22px;
+}
+
+.explore-card-content h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.explore-location-country {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #a9c0ce;
+    font-size: 13px;
+}
+
+.explore-location-country svg {
+    flex-shrink: 0;
+    color: #39baff;
+}
+
+/* ========================================
+   DESTINATION COORDINATES
+======================================== */
+
+.explore-card-coordinates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 22px 0;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.explore-card-coordinates div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.explore-card-coordinates span {
+    color: #7f9bab;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.explore-card-coordinates strong {
+    color: #eaf6ff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ========================================
+   VIEW DESTINATION BUTTON
+======================================== */
+
+.explore-view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 16px;
+    color: #ffffff;
+    background: #078cff;
+    border: 1px solid #078cff;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.explore-view-btn:hover {
+    background: #006fce;
+    border-color: #006fce;
+}
+
+.explore-view-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.explore-view-btn:hover svg {
+    transform: translateX(4px);
+}
+
+.explore-view-btn:focus-visible {
+    outline: 2px solid #39baff;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+
+.explore-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    gap: 16px;
+    color: #a9c0ce;
+    text-align: center;
+}
+
+.explore-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.explore-loader {
+    width: 38px;
+    height: 38px;
+    border: 3px solid rgba(57, 186, 255, 0.2);
+    border-top-color: #39baff;
+    border-radius: 50%;
+    animation: explore-spin 0.8s linear infinite;
+}
+
+@keyframes explore-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   ERROR STATE
+======================================== */
+
+.explore-error {
+    color: #ff8585;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.explore-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    padding: 35px 20px;
+    text-align: center;
+    background: rgba(9, 37, 54, 0.55);
+    border: 1px dashed rgba(255, 255, 255, 0.13);
+    border-radius: 16px;
+}
+
+.explore-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+    color: #39baff;
+    background: rgba(7, 140, 255, 0.12);
+    border-radius: 50%;
+}
+
+.explore-empty-state h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.explore-empty-state p {
+    max-width: 420px;
+    margin: 0;
+    color: #9bb2c0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+    .explore-location-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .explore-results-section {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+    .explore-filter-bar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .explore-filter-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .explore-filter-group select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .explore-reset-btn {
+        grid-column: 1 / -1;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 600px) {
+    .explore-hero {
+        min-height: 400px;
+        padding: 75px 20px;
+    }
+
+    .explore-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .explore-hero-content > p {
+        font-size: 14px;
+    }
+
+    .explore-search-form {
+        gap: 9px;
+        padding: 7px 7px 7px 13px;
+    }
+
+    .explore-search-form input {
+        font-size: 12px;
+    }
+
+    .explore-search-form button {
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+
+    .explore-clear-btn {
+        width: 27px;
+        height: 27px;
+    }
+
+    .explore-search-error {
+        font-size: 12px;
+    }
+
+    .explore-results-section {
+        padding: 55px 18px 70px;
+    }
+
+    .explore-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .explore-section-heading h2 {
+        font-size: 26px;
+    }
+
+    .explore-location-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .explore-card-banner {
+        min-height: 175px;
+    }
+
+    .explore-card-content {
+        padding: 19px;
+    }
+
+    .explore-card-content h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 420px) {
+    .explore-filter-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-reset-btn {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .explore-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .explore-search-form {
+        gap: 7px;
+        padding-left: 10px;
+    }
+
+    .explore-search-form button {
+        padding: 11px 10px;
+    }
+
+    .explore-card-coordinates {
+        gap: 7px;
+    }
+}
